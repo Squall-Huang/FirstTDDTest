@@ -23,4 +23,11 @@ class CartTest {
         val price = cart.buy(1, 100)
         Assertions.assertEquals(80,price)
     }
+
+    @Test
+    fun buy2_vip_get_72_percent_discount() {
+        val cart = Cart(true)
+        val price = cart.buy(2, 100)
+        Assertions.assertEquals(144,price)
+    }
 }
